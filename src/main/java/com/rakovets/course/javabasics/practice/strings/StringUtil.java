@@ -30,7 +30,7 @@ public class StringUtil {
         str = str.trim();
         System.out.println(str.toUpperCase());
     }
-    static String getChars() { // таск 5 +
+    static String getChars() {    // таск 5 +
         String str = "два фламинго стоят на тонких ногах";
         int start = 10;
         int end = 32;
@@ -60,20 +60,19 @@ public class StringUtil {
             if (ch == '.') {
                 drops++;
             }
-            else {
-                if (ch == ',') {
-                    comma++;
-                }
+            if (ch == ',') {
+                comma++;
             }
-            else {
-                if (ch == '!') {
-                    exclamation++
-                }
+            if (ch == '!') {
+                exclamation++;
             }
+
         }
 
-        System.out.println("количество точек: " + drops + "  запятых: " + comma);
-    }
+        System.out.println("количество точек: " + drops + "  запятых: " + comma + " восклицательных знаков: " + exclamation);
+    } //таск 9 посчитать . , ! +
+
+
 }
 
 
