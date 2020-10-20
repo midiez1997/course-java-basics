@@ -35,6 +35,10 @@ public class Task07 {
                 dailyDistance += (dailyProgress / 100 * dailyDistance);
             }
             String result = String.format(Locale.ROOT,"%.2f", totalDistance);
+            System.out.println(result);
+        } else {
+            String result = String.format(Locale.ROOT,"%.2f", totalDistance);
+            System.out.println(result);
         }
     }
 }
