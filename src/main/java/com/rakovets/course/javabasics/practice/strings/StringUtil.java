@@ -2,9 +2,9 @@ package com.rakovets.course.javabasics.practice.strings;
 
 public class StringUtil {
 
-    public String getUpperCase(String string) {
-        return string.toUpperCase();
-    }
+//    public String getUpperCase(String string) {
+//        return string.toUpperCase();
+//    }
 
     public String getConcat(String str1, String str2) { // таск 1 join(объединение) +
      return String.join(" ", str1, str2);
