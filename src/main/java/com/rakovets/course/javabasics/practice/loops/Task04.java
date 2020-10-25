@@ -1,5 +1,7 @@
 package com.rakovets.course.javabasics.practice.loops;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Scanner;
 
 /**
@@ -27,5 +29,15 @@ public class Task04 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+
+        double health = healthPoints;
+        for (int i = 0; i < hoursAfterRespawn; i++) {
+            health = health + (regenerationPercentFromCurrentHealth * health / 100);
+        }
+
+        BigDecimal bigDecimalHealthPoints = BigDecimal.valueOf(new BigDecimal(health).setScale(0, RoundingMode.DOWN.DOWN).doubleValue());
+        healthPoints = bigDecimalHealthPoints.intValue();
+
+        System.out.println(healthPoints);
     }
 }
