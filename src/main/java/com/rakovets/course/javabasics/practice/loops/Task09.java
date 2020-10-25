@@ -30,5 +30,16 @@ public class Task09 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+
+        System.out.println(startNumberItems + " - " + startPriceAllItems + " with sell " + "0.0%");
+
+        int newNumbersItems = startNumberItems;
+        double cost = startPriceAllItems;
+        for (int i = 1; i < sizeTotalPrice; i++) {
+            newNumbersItems += differentialNumberItems;
+            cost = (double) newNumbersItems * cost / (newNumbersItems - differentialNumberItems) * (1 - differentialSell/ 100);
+            differentialSell+=differentialSell;
+            System.out.println(newNumbersItems + " - " + cost + " with sell " + (double) i + "%");
+        }
     }
 }
