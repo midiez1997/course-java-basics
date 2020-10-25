@@ -1,5 +1,7 @@
 package com.rakovets.course.javabasics.practice.loops;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.Scanner;
 
 /**
@@ -23,5 +25,12 @@ public class Task06 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+
+        DecimalFormat formatter = new DecimalFormat();
+        DecimalFormatSymbols symbols = DecimalFormatSymbols.getInstance();
+        symbols.setGroupingSeparator(' ');
+        formatter.setDecimalFormatSymbols(symbols);
+        String formattedAmount = formatter.format(amount);
+        System.out.println(formattedAmount);
     }
 }
