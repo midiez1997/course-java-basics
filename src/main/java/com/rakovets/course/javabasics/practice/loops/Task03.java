@@ -1,5 +1,6 @@
 package com.rakovets.course.javabasics.practice.loops;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 /**
@@ -26,7 +27,14 @@ public class Task03 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        for (int i; i <= depositTerm; i++) {
+
+        for (int i = 0; i < depositTerm; i++) {
+            depositAmount += depositAmount * annualDepositPercent / 100;
         }
+
+        BigDecimal bigDecimal = BigDecimal.valueOf(depositAmount);
+
+        System.out.printf("%.2f", bigDecimal);
+
     }
 }
