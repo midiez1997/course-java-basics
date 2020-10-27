@@ -1,15 +1,40 @@
 package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism;
 
-public class Siamese extends  Cat {
+public class Siamese extends Cat {
+    int age;
+
     public Siamese(String name) {
         super(name);
     }
     @Override
     public String purr() {
-        return "purrSiamese";
+        return "Siamese purr";
     }
+
     @Override
     public String mew() {
-        return "mewSiamese";
+        return "Siamese mew";
+    }
+
+    @Override
+    public String mew(Person person) {
+        String catAnswer;
+        if (person.getHappiness() > 50) {
+            catAnswer = "meeeeeew";
+        } else {
+            catAnswer = "mew";
+        }
+        return catAnswer;
+    }
+
+    @Override
+    public String purr(Person person) {
+        String catAnswer;
+        if (person.getHappiness() > 50) {
+            catAnswer = "puuuuuur";
+        } else {
+            catAnswer = "pur";
+        }
+        return catAnswer;
     }
 }

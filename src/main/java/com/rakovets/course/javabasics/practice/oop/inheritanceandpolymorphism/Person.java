@@ -1,14 +1,10 @@
 package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism;
 
 public class Person {
-    private  int happiness;
+    private int happiness;
 
     public Person(int happiness) {
         this.happiness = happiness;
-    }
-
-    public void changeHappiness(int percentHappiness) {
-        happiness += percentHappiness;
     }
 
     public int getHappiness() {
@@ -16,6 +12,10 @@ public class Person {
     }
 
     public void setHappiness(int happiness) {
+        this.happiness = happiness;
+    }
+
+    public void changeHappiness(int happiness) {
         this.happiness = happiness;
     }
 }
