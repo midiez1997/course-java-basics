@@ -8,6 +8,7 @@ public class PairUtil {
 
     public static void main(String[] args) {
         Pair pair = new Pair(3, 7);
-        swap(pair);
+        swap (pair);
     }
+
 }
