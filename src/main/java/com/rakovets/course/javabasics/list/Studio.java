@@ -1,40 +1,23 @@
 package com.rakovets.course.javabasics.list;
 
+import java.util.Set;
+import java.util.TreeSet;
+
 public class Studio {
 
-//   private String actors;
-
-//    public static fire() {
-//
-//    }
+    private Set<Actor> actors = new TreeSet<>(); // Set - интерфейс, создали коллекцию Treeset(реализации)
 
 
-//    public static void main(String[] args) {
-//        List<String> strList = new ArrayList<>();
-//        strList.add("AA");
-//        strList.add("CCCC");
-//        strList.add("BBBBB");
-//        strList.add("Z");
-//        strList.add("EEE");
-//
-//        strList.sort(Comparator.comparingInt(String::length));
-//        strList.forEach(System.out::println);
-//    }
+    public void fire(Set<Actor> actors) {
+        Actor[] actorsArray = actors.toArray(new Actor[actors.size()]);
+        Actor actorWithMaxFee = actorsArray[0];
 
-
-//    * `actors` - список актеров, которые работают в студии.
-//
-//Методы:
-//
-//* `fire()` - принимает список актеров и удаляющий из него актера с наибольшим гонораром.
-//
-//=== Specification of task 3
-//
-//Написать компараторы, которые позволят отсортировать список актёров по:
-//
-//* фамилии
-//* возрасту
-//* гонорару
-//* фамилии и возрасту
-//* гонорару и фамилии
+        for (int i = 0; i < actorsArray.length; i++) {
+            this.actors.add(actorsArray[i]);
+            if (actorsArray[i].getFee() > actorWithMaxFee.getFee()) {
+                actorWithMaxFee = actorsArray[i];
+            }
+        }
+        this.actors.remove(actorWithMaxFee);
+    }
 }
