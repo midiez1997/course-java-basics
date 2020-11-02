@@ -59,7 +59,7 @@ public class StringUtil {
         return count;
     }
 
-    public int getStringNumbersOfSimbols(String str) { // таск 9
+    public int getStringNumbersOfSymbols(String str) { // таск 9
         int count = 0;
         char[] array = new char[]{'.', ',', '!'};
         for (char simb : str.toLowerCase().toCharArray()) {
@@ -73,7 +73,7 @@ public class StringUtil {
         return count;
     }
 
-    public String getStringRevers(String strB) { // таск 10
+    public String getStringReverse(String strB) { // таск 10
         StringBuilder str = new StringBuilder(strB);
         return str.reverse().toString();
     }
