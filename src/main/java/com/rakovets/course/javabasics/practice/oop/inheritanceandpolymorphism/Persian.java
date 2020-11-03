@@ -1,7 +1,6 @@
 package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism;
 
 public class Persian extends Cat {
-    int age;
 
     public Persian(String name) {
         super(name);

@@ -27,5 +27,8 @@ public class Cat {
         return "purr";
     }
 
-}
+    public String mew(Person person) { // purr()` – кот мяукает (т.е возвращает "текст" мяуканья)
+        return "purr";
+    }
 
+}

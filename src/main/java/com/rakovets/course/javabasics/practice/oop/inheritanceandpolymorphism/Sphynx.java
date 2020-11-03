@@ -1,18 +1,19 @@
 package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism;
 
 public class Sphynx extends Cat {
-    int age;
+
 
     public Sphynx(String name) {
         super(name);
     }
     @Override
     public String purr() {
-        return "purrSphynx";
+        return "Sphynx purr";
     }
+
     @Override
     public String mew() {
-        return "mewSphynx";
+        return "Sphynx mew";
     }
 
     @Override
