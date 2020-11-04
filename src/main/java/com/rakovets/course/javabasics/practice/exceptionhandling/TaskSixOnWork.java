@@ -1,6 +1,6 @@
 package com.rakovets.course.javabasics.practice.exceptionhandling;
 
-public class TaskSix {
+public class TaskSixOnWork {
     public static void main(String[] args) {
         final int min = 1;
         final int max = 3;
