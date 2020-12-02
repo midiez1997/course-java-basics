@@ -3,9 +3,7 @@ package com.rakovets.course.javabasics.practice.concurrency.utilities;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+
 
 public class ParallelCalculatorRunner {
     private List<Integer[]> list = new ArrayList<>();
@@ -36,8 +34,6 @@ public class ParallelCalculatorRunner {
 
     public long getExeTime(int numberOfThreads) {
         long startTime = System.nanoTime();
-//        ExecutorService executor = Executors.newFixedThreadPool(1);
-//        Runnable worker = new ParallelCalculator(1);
         ParallelCalculator.calcMax(list, numberOfThreads);
         long stopTime = System.nanoTime();
         return stopTime - startTime;
@@ -57,4 +53,5 @@ public class ParallelCalculatorRunner {
         return list;
     }
 }
+
 

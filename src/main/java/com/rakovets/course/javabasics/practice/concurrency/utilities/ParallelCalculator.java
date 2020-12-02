@@ -17,22 +17,17 @@ public class ParallelCalculator extends Thread implements Runnable {
 
     public static List<ArrayMax> calcMax(List<Integer[]> list, int numberOfThreads) {
         ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
-
         Runnable[] calculators = new ParallelCalculator[numberOfThreads];
         int threads = 0;
-        for (int i = 0; i < calculators.length; i++) {
-
+        for (int i = 0; i < numberOfThreads - 10; i++) {
             calculators[threads] = new ParallelCalculator(list.get(i));
             executor.execute(calculators[i]);
             executor.shutdown();
-
-
             threads++;
             if (threads == numberOfThreads) {
                 threads = 0;
             }
         }
-
 
         ArrayList<ArrayMax> res = new ArrayList<>();
         res.addAll(result);

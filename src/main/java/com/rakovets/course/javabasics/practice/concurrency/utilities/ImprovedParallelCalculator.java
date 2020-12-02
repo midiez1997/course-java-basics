@@ -12,7 +12,7 @@ public class ImprovedParallelCalculator {
 
         List<Future<Long>> tasks = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-         MyCallable mc = new MyCallable();
+            MyCallable mc = new MyCallable();
             Future<Long> submit = es.submit(mc);
             tasks.add(submit);
         }
@@ -32,9 +32,9 @@ class MyCallable implements Callable<Long> {
     @Override
     public Long call() {
         try {
-        System.out.println("Started: " + Thread.currentThread().getId());
-        Thread.sleep((1000 + Math.round(Math.random() * 5000)));
-        System.out.println("Finished: " + Thread.currentThread().getId());
+            System.out.println("Started: " + Thread.currentThread().getId());
+            Thread.sleep((1000 + Math.round(Math.random() * 5000)));
+            System.out.println("Finished: " + Thread.currentThread().getId());
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
